@@ -1,6 +1,6 @@
 DeviceComments::Application.routes.draw do
-  devise_for :users
-
+  devise_for :users, :controllers => {:registrations => "registrations"}
+  match '/users/sign_up' =>  'registrations#new' , :as => :new_user_registration
   resources :comments
   root to: 'comments#index'
 
