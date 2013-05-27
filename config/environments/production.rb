@@ -65,19 +65,9 @@ DeviceComments::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.default_url_options = { :host => 'adil.nazir@gmail.com' }
+  config.action_mailer.default_url_options = { :host => 'adil.nazir@tkxel.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
-
-  config.action_mailer.smtp_settings = {
-      address: "smtp.gmail.com",
-      port: 587,
-      domain: "gmail.com",
-      authentication: "plain",
-      enable_starttls_auto: true,
-      user_name: ENV["adil.nazir"],
-      password: ENV["sooper"]
-  }
 end
